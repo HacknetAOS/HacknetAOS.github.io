@@ -13,6 +13,7 @@
   const ctx = canvas.getContext('2d', { alpha: false });
   const customCursor = document.getElementById('custom-cursor');
   const audioEl = document.getElementById('bgm');
+  audioEl.volume = 0.2;
   const audioToggle = document.getElementById('audio-toggle');
   const audioLabel = document.getElementById('audio-label');
 
@@ -305,7 +306,7 @@
   }
 
   function initAudio() {
-    audioEl.volume = 0.75;
+    audioEl.volume = 0.2;
     audioEl.play().then(() => {
       isAudioPlaying = true;
       updateAudioUI();
